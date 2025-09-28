@@ -13,4 +13,4 @@ It showcases my projects, skills, and a little about me.
 ## 📂 How to View
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/SyedSajidulhaq/Portfolio
