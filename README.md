@@ -8,7 +8,11 @@ It showcases my projects, skills, and a little about me.
 - About section 👤  
 - Skills showcase 🛠  
 - Certifications
-- Projects / Work samples 💻  
+- Projects / Work samples 💻
+  
+---
+**Visit Us:** [https://syedsajidulhaq.netlify.app](https://syedsajidulhaq.netlify.app)  
+**Email:** [syedsajidulhaq@gmail.com](mailto:syedsajidulhaq@gmail.com)
 
 ## 📂 How to View
 1. Clone the repo:
