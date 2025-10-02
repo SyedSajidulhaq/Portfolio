@@ -322,19 +322,26 @@ footer {
       </div>
     </div>
 
-    <!-- Workshop 2 -->
-    <div class="cert-card">
-      <div style="display: flex; justify-content: space-between; align-items: center;" onclick="toggleDetails(this)">
-        <span><i class="fas fa-flask"></i> Poster Presentation: CresNANO-AI at International Nanotech Conference</span>
-        <span style="font-size: 1.2rem;">&#9660;</span>
-      </div>
-      <div class="details" style="display:none; margin-top: 10px; color:#555;">
-        Presented <strong>CresNANO-AI</strong>, an AI-powered tool I developed using <strong>Python</strong> (Scikit-learn, Streamlit, Plotly, Pandas, Matplotlib, TensorFlow).  
-        The tool leverages machine learning techniques including <strong>Random Forests, Linear Regression, Neural Networks</strong>.  
-        <a href="https://cresnano-ai.streamlit.app" target="_blank" style="display:block; margin-top:10px; background:#0d6efd; color:#fff; text-align:center; padding:8px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">Try CresNANO-AI</a>
-      </div>
-    </div>
-
+<!-- Workshop 2 -->
+<div class="cert-card" style="flex-direction: column; cursor: pointer;">
+  <div style="display: flex; justify-content: space-between; align-items: center;" onclick="toggleDetails(this)">
+    <span><i class="fas fa-flask"></i> Poster Presentation: CresNANO-AI at International Nanotech Conference</span>
+    <span style="font-size: 1.2rem;">&#9660;</span>
+  </div>
+  <div class="details" style="display:none; margin-top: 10px; color:#555;">
+    Presented <strong>CresNANO-AI</strong>, an AI-powered tool I developed using <strong>Python</strong> (Scikit-learn, Streamlit, Plotly, Pandas, Matplotlib, TensorFlow) to predict properties and applications of 32 nanomaterials stored in the database.  
+    The tool leverages machine learning techniques including <strong>Random Forests, Linear Regression, Neural Networks</strong>, and other ML models for accurate predictions.  
+    Key features demonstrated:  
+    <ul>
+      <li>3D Scatter Plots to visualize multi-dimensional material properties</li>
+      <li>Bar Graphs and Pie Charts for property distribution</li>
+      <li>Correlation Matrices and Radar Graphs for material property analysis</li>
+      <li>Trend Analysis and Data Comparison across materials</li>
+      <li>Download options: Graphs as JPG and data as CSV for further analysis</li>
+    </ul>
+    <a href="https://cresnano-ai.streamlit.app" target="_blank" style="display:block; margin-top:10px; background:#0d6efd; color:#fff; text-align:center; padding:8px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">Try CresNANO-AI</a>
+  </div>
+</div>
     <!-- Workshop 3 -->
     <div class="cert-card">
       <div style="display: flex; justify-content: space-between; align-items: center;" onclick="toggleDetails(this)">
