@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syed Sajid Ul Haq Portfolio</title>
+<!-- Font Awesome Free CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ---------- Global Styles ---------- */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #f5f5f6, #e0e0ff);
+    color: #333;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+/* Links */
+a { text-decoration: none; color: inherit; }
+h1, h2, h3 { margin: 0 0 10px 0; }
+p { line-height: 1.6; }
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+    background: linear-gradient(to bottom, #0d6efd, #6610f2);
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+}
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sidebar nav a {
+    display: block;
+    padding: 12px 10px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+.sidebar nav a:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateX(5px);
+}
+
+/* Sidebar Toggle */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(to right, #0d6efd, #6610f2);
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    z-index: 1100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+/* ---------- Content ---------- */
+.content {
+    margin-left: 250px;
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* ---------- Hero Section ---------- */
+#hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  min-height: 60px;
+}
+
+#hero p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Sections ---------- */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: linear-gradient(to right, #e9ecef, #f8f9fa);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+section h2 { 
+    color: #0d6efd; 
+    margin-bottom: 25px; 
+    text-align:center; 
+    font-size: 2rem;
+}
+section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* ---------- About & Columns ---------- */
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+#about > div {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* ---------- Skills ---------- */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.skill {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.2); }
+
+/* ---------- Certifications & Workshops ---------- */
+.certifications {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cert-card {
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+}
+.cert-card i { color: #0d6efd; font-size: 1.3rem; }
+.cert-card:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.2); color: #0d6efd; }
+
+/* ---------- Social Links ---------- */
+.social-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+.social-link:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #6610f2, #0d6efd);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background: linear-gradient(to right, #0d6efd, #6610f2);
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+/* ---------- Scroll Reveal ---------- */
+.before-reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal { opacity: 1; transform: translateY(0); }
+
+/* ---------- Responsive ---------- */
+@media(max-width: 768px){
+    .content { margin-left: 0; }
+    .sidebar { transform: translateX(-100%); position: fixed; }
+    .sidebar-toggle { display: block; }
+    #about { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+<div class="sidebar" id="sidebar">
+    <a href="#hero"><h2>Syed Sajid Ul Haq</h2></a>
+    <nav>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#skills"><i class="fas fa-lightbulb"></i> Skills</a>
+        <a href="#workshops"><i class="fas fa-chalkboard-teacher"></i> Workshops</a>
+    </nav>
+</div>
+
+<!-- Content -->
+<div class="content">
+
+<!-- 🌟 Hero Section -->
+<header id="hero">
+  <h1 id="hero-name"></h1>
+  <p id="hero-subtitle">Web Developer • Designer • AI Innovator</p>
+</header>
+
+<!-- About & Certifications Section -->
+<section id="about">
+  <!-- Left Column: Personal Info -->
+  <div>
+    <h2 id="about-name"></h2>
+    <p style="font-weight: bold; color:#0d6efd;">
+      Student • Govt. BHSS Soura • Class 12th (PCM)
+    </p>
+    <p>
+      Hello! I'm <strong style="background-color:#ffeb3b; color:#000; padding:2px 6px; border-radius:4px; text-decoration:none;">Syed Sajid Ul Haq</strong>, a passionate web developer, AI enthusiast, and designer with a keen interest in technology and innovation. I am also the <strong>CTO & Founder of <a href="https://crescenton.netlify.app" target="_blank" style="background:#0d6efd; color:#fff; padding:2px 6px; border-radius:4px; text-decoration:none;">Crescenton</a></strong>.  
+      Over the years, I have honed my skills in web development, prompt engineering, graphic design, and data analytics. I thrive on creating modern and responsive websites that not only look visually appealing but also deliver smooth user experiences.  
+      I enjoy experimenting with new technologies, building efficient digital workflows, and mentoring others in tech. Beyond coding, I actively participate in workshops, training sessions, and conferences to share knowledge and stay at the forefront of innovation.  
+      My ultimate goal is to leverage technology to make a meaningful impact on education, creativity, and productivity. You can reach me at <a href="mailto:syedsajidulhaq@gmail.com" style="background:#0d6efd; color:#fff; padding:2px 6px; border-radius:4px; text-decoration:none;">syedsajidulhaq@gmail.com</a> for collaborations or inquiries.
+    </p>
+    <h3>Connect with Me</h3>
+    <div class="social-row">
+      <a href="https://github.com/SyedSajidulhaq" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/syedsajidulhaq/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@syedsajidulhaq" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+      <a href="https://linkedin.com/in/SyedSajidulhaq" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/919103301945" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- Right Column: Certifications -->
+  <div>
+    <h2>Certifications</h2>
+    <div class="certifications" style="margin-top: 20px;">
+      <a href="https://certificate.hack2skill.com/user/aibuilderslab/2024H2S10AIBL-P003888" target="_blank" class="cert-card"><i class="fas fa-award"></i> Certified AI Enthusiast: Google for Developers + Hack2Skill</a>
+      <a href="https://courses.analyticsvidhya.com/certificates/p1mxtivaot" target="_blank" class="cert-card"><i class="fas fa-chart-line"></i> Certified Data Analytics: Analytics Vidhya</a>
+      <a href="https://courses.analyticsvidhya.com/certificates/ejuqj967vn" target="_blank" class="cert-card"><i class="fas fa-code"></i> Certified Vibe Coder (Windsurf): Analytics Vidhya</a>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+    <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+    <div class="skill"><i class="fab fa-js-square"></i> JavaScript</div>
+    <div class="skill"><i class="fas fa-code"></i> Python</div>
+    <div class="skill"><i class="fas fa-terminal"></i> Vibe Coding</div>
+    <div class="skill"><i class="fas fa-lightbulb"></i> Prompt Engineering</div>
+    <div class="skill"><i class="fas fa-paint-brush"></i> Graphic Design</div>
+    <div class="skill"><i class="fas fa-video"></i> Video Editing</div>
+  </div>
+</section>
+
+<!-- Workshops Section -->
+<section id="workshops">
+  <h2>Workshops & Trainings</h2>
+  <div class="certifications" style="margin-top: 20px;">
+    
+    <!-- Workshop 1 -->
+    <div class="cert-card">
+      <div style="display: flex; justify-content: space-between; align-items: center;" onclick="toggleDetails(this)">
+        <span><i class="fas fa-chalkboard-teacher"></i> Trainer: One-day workshop on AI & Prompt Engineering at Govt. BHSS Soura</span>
+        <span style="font-size: 1.2rem;">&#9660;</span>
+      </div>
+      <div class="details" style="display:none; margin-top: 10px; color:#555;">
+        Conducted a full-day session on AI concepts, prompt engineering, and hands-on exercises for students. Focused on practical applications of AI in education and real-world scenarios.
+      </div>
+    </div>
+
+    <!-- Workshop 2 -->
+    <div class="cert-card">
+      <div style="display: flex; justify-content: space-between; align-items: center;" onclick="toggleDetails(this)">
+        <span><i class="fas fa-flask"></i> Poster Presentation: CresNANO-AI at International Nanotech Conference</span>
+        <span style="font-size: 1.2rem;">&#9660;</span>
+      </div>
+      <div class="details" style="display:none; margin-top: 10px; color:#555;">
+        Presented <strong>CresNANO-AI</strong>, an AI-powered tool I developed using <strong>Python</strong> (Scikit-learn, Streamlit, Plotly, Pandas, Matplotlib, TensorFlow).  
+        The tool leverages machine learning techniques including <strong>Random Forests, Linear Regression, Neural Networks</strong>.  
+        <a href="https://cresnano-ai.streamlit.app" target="_blank" style="display:block; margin-top:10px; background:#0d6efd; color:#fff; text-align:center; padding:8px 12px; border-radius:6px; text-decoration:none; font-weight:bold;">Try CresNANO-AI</a>
+      </div>
+    </div>
+
+    <!-- Workshop 3 -->
+    <div class="cert-card">
+      <div style="display: flex; justify-content: space-between; align-items: center;" onclick="toggleDetails(this)">
+        <span><i class="fas fa-award"></i> Certified AI Enthusiast: Google for Developers in collaboration with Hack2Skill</span>
+        <span style="font-size: 1.2rem;">&#9660;</span>
+      </div>
+      <div class="details" style="display:none; margin-top: 10px; color:#555;">
+        Completed an AI enthusiast program focusing on practical AI projects, development tools, and industry best practices.
+        <a href="https://certificate.hack2skill.com/user/aibuilderslab/2024H2S10AIBL-P003888" target="_blank" style="display:block; margin-top:10px; background:#0d6efd; color:#fff; text-align:center; padding:8px 12px; border-radius:6px; text-decoration:none;">View Certificate</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Syed Sajid Ul Haq. All rights reserved.</p>
+  <div class="social-row">
+    <a href="https://github.com/SyedSajidulhaq" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/syedsajidulhaq/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@syedsajidulhaq" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+    <a href="https://linkedin.com/in/SyedSajidulhaq" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/919103301945" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<!-- ---------- JavaScript ---------- -->
+<script>
+// Typing Animation for Hero Name
+const heroText = "SYED SAJID UL HAQ";
+let i = 0;
+function typeWriter() {
+  if (i < heroText.length) {
+    document.getElementById("hero-name").innerHTML += heroText.charAt(i);
+    i++;
+    setTimeout(typeWriter, 120);
+  }
+}
+
+// Typing Animation for About Name
+const aboutText = "SYED SAJID UL HAQ";
+let j = 0;
+function typeAboutName() {
+  if (j < aboutText.length) {
+    document.getElementById("about-name").innerHTML += aboutText.charAt(j);
+    j++;
+    setTimeout(typeAboutName, 120);
+  }
+}
+
+// Start typing animations on window load
+window.onload = () => { 
+  typeWriter(); 
+  typeAboutName(); 
+};
+
+// Sidebar toggle
+const sidebar = document.getElementById('sidebar');
+const toggleBtn = document.getElementById('sidebarToggle');
+toggleBtn.addEventListener('click', () => {
+  sidebar.style.transform = (sidebar.style.transform === 'translateX(0px)' || sidebar.style.transform === 'translateX(0)') 
+    ? 'translateX(-100%)' 
+    : 'translateX(0)';
+});
+
+// Scroll reveal animations
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('reveal');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section, .skill, .cert-card').forEach(el => {
+  el.classList.add('before-reveal');
+  observer.observe(el);
+});
+
+// Toggle details in workshops
+function toggleDetails(cardHeader) {
+  const details = cardHeader.nextElementSibling;
+  if(details.style.display === "none" || details.style.display === "") {
+    details.style.display = "block";
+    cardHeader.querySelector('span:last-child').innerHTML = '&#9650;'; // up arrow
+  } else {
+    details.style.display = "none";
+    cardHeader.querySelector('span:last-child').innerHTML = '&#9660;'; // down arrow
+  }
+}
+</script>
+</body>
+</html>
