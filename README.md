@@ -8,10 +8,10 @@ It showcases my projects, skills, and a little about me.
 - About section 👤  
 - Skills showcase 🛠  
 - Certifications
-- Projects / Work samples 💻
+- Workshops 
   
 ---
-**Visit Us:** [Syed Sajid Ul HAQ](https://syedsajidulhaq.github.io/Portfolio/))  
+**Visit Us:** [Syed Sajid Ul HAQ](https://syedsajidulhaq.github.io/Portfolio/) 
 **Email:** [yedsajidulhaq@gmail.com](mailto:syedsajidulhaq@gmail.com)
 
 ## 📂 How to View
