@@ -1,6 +1,6 @@
 # 🌐 My Portfolio Website
 
-This is my personal portfolio built using **HTML** and **CSS**.  
+This is my personal portfolio built using **HTML** , **CSS** and **JS**
 It showcases my projects, skills, and a little about me.
 
 ## 🚀 Features
