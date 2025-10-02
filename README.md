@@ -11,8 +11,8 @@ It showcases my projects, skills, and a little about me.
 - Projects / Work samples 💻
   
 ---
-**Visit Us:** [https://syedsajidulhaq.netlify.app](https://syedsajidulhaq.netlify.app)  
-**Email:** [syedsajidulhaq@gmail.com](mailto:syedsajidulhaq@gmail.com)
+**Visit Us:** [Syed Sajid Ul HAQ](https://syedsajidulhaq.github.io/Portfolio/))  
+**Email:** [yedsajidulhaq@gmail.com](mailto:syedsajidulhaq@gmail.com)
 
 ## 📂 How to View
 1. Clone the repo:
