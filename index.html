@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syed Sajid Ul Haq Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+<!-- Sidebar -->
+<button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+<div class="sidebar" id="sidebar">
+  <nav>
+    <a href="#hero"><i class="fas fa-home"></i> Home</a>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#templates"><i class="fas fa-briefcase"></i> Projects</a>
+    <a href="#projects"><i class="fas fa-project-diagram"></i> Services Offered</a>
+    <a href="#skills"><i class="fas fa-lightbulb"></i> Skills</a>
+    <a href="#timeline"><i class="fas fa-history"></i> Timeline</a>
+    <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
+</div>
+
+<!-- Content -->
+<div class="content">
+
+<!-- Hero -->
+<header id="hero">
+  <h1 id="hero-name"></h1>
+  <p id="hero-subtitle">Web Developer • Designer • AI Innovator</p>
+  <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+</header>
+
+<!-- About -->
+<section id="about">
+  <h2 class="gradient-text">About Me</h2>
+  <p>Hello! I'm <strong>Syed Sajid Ul Haq</strong>, a passionate web developer, AI enthusiast, and founder of <a href="https://crescenton.netlify.app" target="_blank">Crescenton</a>. I create modern, responsive websites, AI tools, and design solutions that stand out. Reach me at <a href="mailto:syedsajidulhaq@gmail.com">syedsajidulhaq@gmail.com</a>.</p>
+</section>
+
+<!-- Tech Stack -->
+<section id="skills">
+  <h2 class="gradient-text">Tech Stack</h2>
+  <div class="tech-stack">
+    <div class="tech"><span>HTML</span><div class="bar"><div class="progress" style="width: 95%;">95%</div></div></div>
+    <div class="tech"><span>CSS</span><div class="bar"><div class="progress" style="width: 80%;">80%</div></div></div>
+    <div class="tech"><span>Python</span><div class="bar"><div class="progress" style="width: 60%;">60%</div></div></div>
+    <div class="tech"><span>Prompt Engineering</span><div class="bar"><div class="progress" style="width: 95%;">95%</div></div></div>
+    <div class="tech"><span>AI Tools</span><div class="bar"><div class="progress" style="width: 90%;">90%</div></div></div>
+  </div>
+</section>
+ 
+<!-- Portfolio / Website Templates -->
+<section id="templates">
+  <h2 class="gradient-text">Website Templates</h2>
+  <p class="section-desc">
+    Explore some of my ready-made website templates. Click "Open in New Tab" to see the full version.
+  </p>
+
+  <div class="template-grid">
+    <!-- Template 1 -->
+    <div class="slider-container">
+      <h3>Funngrow Teen Page</h3>
+      <div class="slider">
+        <img src="template/tempelate0_slide1.jpg" alt="Funngrow Teen Screenshot 1">
+        <img src="template/tempelate0_slide2.jpg" alt="Funngrow Teen Screenshot 2">
+        <img src="template/tempelate0_slide3.jpg" alt="Funngrow Teen Screenshot 3">
+        <img src="template/tempelate0_slide4.jpg" alt="Funngrow Teen Screenshot 4">
+        <img src="template/tempelate0_slide5.jpg" alt="Funngrow Teen Screenshot 5">
+      </div>
+       <br>
+      <a href="https://syedsajidulhaq.github.io/Funngrow-Teen-Page/teens.html" target="_blank" class="btn">Open in New Tab</a>
+    </div>
+
+    <!-- Template 2 -->
+    <div class="slider-container">
+      <h3>EduLearn (Educational Website)</h3>
+      <div class="slider">
+        <img src="template/template1_slide1.jpg" alt="Template 2 Screenshot 1">
+        <img src="template/template1_slide2.jpg" alt="Template 2 Screenshot 2">
+        <img src="template/template1_slide3.jpg" alt="Template 2 Screenshot 3">
+        <img src="template/template1_slide4.jpg" alt="Template 2 Screenshot 4">
+      </div>
+       <br>
+      <a href="https://cresenton.netlify.app/template/template1" target="_blank" class="btn">Open in New Tab</a>
+    </div>
+
+    <!-- Template 3 -->
+    <div class="slider-container">
+      <h3>ShopEase (E-Commerce Website)</h3>
+      <div class="slider">
+        <img src="template/template2_slide1.jpg" alt="Template 3 Screenshot 1">
+        <img src="template/template2_slide2.jpg" alt="Template 3 Screenshot 2">
+        <img src="template/template2_slide3.jpg" alt="Template 3 Screenshot 3">
+        <img src="template/template2_slide4.jpg" alt="Template 3 Screenshot 4">
+        <img src="template/template2_slide5.jpg" alt="Template 3 Screenshot 5">
+      </div>
+      <br>
+      <a href="https://cresenton.netlify.app/template/template2" target="_blank" class="btn">Open in New Tab</a>
+    </div>
+    <script>
+document.querySelectorAll('.slider').forEach(slider => {
+  const slides = slider.querySelectorAll('img');
+  let current = 0;
+
+  slides[current].classList.add('active'); // show first slide
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 2000); // 3 seconds per slide
+});
+</script>
+  </div>
+</section>
+  
+<!-- Projects / Cards -->
+<section id="projects">
+  <h2 class="gradient-text">What I Do</h2>
+  <div class="cards">
+    <div class="card"><i class="fas fa-laptop-code"></i> Website Development</div>
+    <div class="card"><i class="fas fa-pencil-alt"></i> Logo & Branding</div>
+    <div class="card"><i class="fas fa-file-alt"></i> Landing Page Design</div>
+    <div class="card"><i class="fas fa-robot"></i> AI Automation Setup</div>
+    <div class="card"><i class="fas fa-lightbulb"></i> Prompt Engineering</div>
+    <div class="card"><i class="fas fa-image"></i> Thumbnail Creation</div> 
+  </div>
+</section>
+
+<!-- Timeline -->
+<section id="timeline">
+  <h2 class="gradient-text">Timeline</h2>
+  <div class="timeline">
+    <div class="event"><span>2022</span> Started coding</div>
+    <div class="event"><span>2023</span> Built first website</div>
+    <div class="event"><span>2023</span> Started Crescenton</div>
+    <div class="event"><span>2023</span> Workshops & Certifications</div>
+    <div class="event"><span>2025</span> CresNANO-AI</div>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2 class="gradient-text">Achievements</h2>
+
+  <div class="achievement-block">
+    <div class="achievement-title">Poster Presentation at International Conference</div>
+    <img src="achievement/PosterNBL.jpg" class="achievement-image" alt="Poster Presentation Certificate">
+     </div>
+  <center> <a href="https://cresenano-ai.onrender.com" target="_blank" class="resume-btn">Try CresNANO-AI</a>
+</center>
+  <br><br>
+  
+   <div class="achievement-block">
+    <div class="achievement-title">Google + Hack2Skill Recognition</div>
+    <img src="achievement/Hack2skill-Certificate.png" class="achievement-image" alt="Google Hack2Skill Certificate">
+  </div>
+
+  <div class="achievement-block">
+    <div class="achievement-title">Vibe Coding In Windsurf</div>
+    <img src="https://cdn.filestackcontent.com/ywzO6nZWTrmRbjniApMj?policy=eyJjYWxsIjpbInJlYWQiXSwiZXhwaXJ5IjoxNzY0OTU5NzY3LCJwYXRoIjoiLyJ9&signature=e2144f94747053e4413e32054d01c165e89222f69d6c991c6e057fcd48763d3f" class="achievement-image" alt="Vibe Coding In Windsurf">
+  </div>
+
+  <div class="achievement-block">
+    <div class="achievement-title">Data Analytics</div>
+    <img src="https://cdn.filestackcontent.com/IpgocIBqRjqIpLgvWPeH?policy=eyJjYWxsIjpbInJlYWQiXSwiZXhwaXJ5IjoxNzY0OTU5NzM3LCJwYXRoIjoiLyJ9&signature=21dfbe10c628d2b0b21312625bc13028ea7c0ad6a69b9ba2c89e9a35197b3e62" class="achievement-image" alt="Data Analytics">
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+ 
+  <div class="social-row">
+    <a href="https://github.com/SyedSajidulhaq" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/syedsajidulhaq/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@syedsajidulhaq" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://linkedin.com/in/SyedSajidulhaq" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/919103301945" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <p>&copy; 2025 Syed Sajid Ul Haq. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
