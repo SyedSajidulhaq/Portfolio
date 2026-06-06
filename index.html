@@ -182,7 +182,11 @@ document.querySelectorAll('.slider').forEach(slider => {
     <a href="https://linkedin.com/in/SyedSajidulhaq" target="_blank"><i class="fab fa-linkedin"></i></a>
     <a href="https://wa.me/919103301945" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
-  <p>&copy; 2025 Syed Sajid Ul Haq. All rights reserved.</p>
+  <p>&copy; <span id="year"></span> Syed Sajid Ul Haq. All rights reserved.</p>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </footer>
 
 <script src="script.js"></script>
