@@ -51,4 +51,9 @@ function animateProgressBars(){
     setTimeout(()=>{ bar.style.width = width; }, 500);
   });
 }
+const resumeBtn = document.querySelector(".resume-btn");
+
+resumeBtn.addEventListener("click", () => {
+  alert("Resume download started. Thank you for visiting my portfolio.");
+});
   
